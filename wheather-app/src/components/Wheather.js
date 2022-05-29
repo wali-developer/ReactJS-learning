@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./Weather.css";
+require("dotenv").config();
+
 class Wheather extends React.Component {
   constructor() {
     super();
@@ -78,7 +80,7 @@ class Wheather extends React.Component {
 
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lang}&appid=3dd9a7f341c33d36438aad0580bf1108`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lang}&${process.env.APPID}`
       )
       .then((res) => {
         this.setState({
