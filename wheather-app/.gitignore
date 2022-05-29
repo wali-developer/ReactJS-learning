@@ -25,5 +25,8 @@ yarn-error.log*
 # weather api key from openweathermap.org
 # https://api.openweathermap.org/data/2.5/weather?lat=34.0004997&lon=71.474387&appid=3dd9a7f341c33d36438aad0580bf1108
 
-node_modules/
+# modules
+/node_modules
+
+#api key
 .env
